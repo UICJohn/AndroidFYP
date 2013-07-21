@@ -1,0 +1,6 @@
+#For %.o file
+*.o
+
+#For executable file
+*$
+

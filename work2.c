@@ -4,21 +4,24 @@
 #include "work2.h"
 #include "../goldfish/include/linux/prinfo.h"
 
-int main(int argv,char** argc){
+int main(int argc, char** argv){
   	int nr = DEFAULT_SIZE;
+	int fb;//Feedback from syscall
 	struct prinfo *buf;
-	if(argv > 1){
-		if(!(nr = is_Num(argc[1]))){
+	if(argc > 1){
+		if(!(nr = is_Num(argv[1]))){
 			nr = DEFAULT_SIZE;
 		}
 	}
-	printf("Assign size of %d\n",nr);
+	printf("Assign size of %d...\n",nr);
 	buf = calloc(nr,sizeof(struct prinfo));
 	if(!buf){
 		printf("Could not allocate buffer for buf!\b");
 		exit(-1);
 	}
-	
+	feedback = syscall(223,buf,&nr);
+	printf("Feedback = %d",fb);
+	return 0;
 }
 
 int is_Num(char* element){

@@ -1,0 +1,17 @@
+#For goldfish
+
+emulator -sysdir /home/john/Android/Android2.3.7/android-2.3.7_r1/out/target/product/generic/ -system /home/john/Android/Android2.3.7/android-2.3.7_r1/out/target/product/generic/system.img -ramdisk /home/john/Android/Android2.3.7/android-2.3.7_r1/out/target/product/generic/ramdisk.img -data /home/john/Android/Android2.3.7/android-2.3.7_r1/out/target/product/generic/userdata.img -kernel /home/john/Android/goldfish/arch/arm/boot/zImage -sdcard sdcard.img -skindir /home/john/Android/Android2.3.7/android-2.3.7_r1/sdk/emulator/skins -skin HVGA -memory 512 -partition-size 1024 -show-kernel -verbose 
+
+
+
+. ~/.profile #make clean export PATH=/etc/arm-2011.03/bin:$PATH export ARCH=arm export SUBARCH=arm export CROSS_COMPILE=arm-none-linux-gnueabi- export ANDROID_PRODUCT_OUT=/home/john/Android/Android2.3.7/android-2.3.7_r1/out/target/product/generic/ #make goldfish_armv7_defconfig make goldfish_defconfig make clean make
+
+
+#For W4118
+emulator -sysdir /home/john/Android/Android2.3.7/android-2.3.7_r1/out/target/product/generic/ -system /home/john/Android/Android2.3.7/android-2.3.7_r1/out/target/product/generic/system.img -ramdisk /home/john/Android/Android2.3.7/android-2.3.7_r1/out/target/product/generic/ramdisk.img -data /home/john/Android/Android2.3.7/android-2.3.7_r1/out/target/product/generic/userdata.img -kernel /home/john/Android/W4118_HW2/android-goldfish-2.6.29/arch/arm/boot/zImage -sdcard sdcard.img -skindir /home/john/Android/Android2.3.7/android-2.3.7_r1/sdk/emulator/skins -skin HVGA -memory 512 -partition-size 1024 -show-kernel -verbose
+
+
+ 
+
+
+
