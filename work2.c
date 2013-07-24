@@ -19,7 +19,8 @@ int main(int argc, char** argv){
 		printf("Could not allocate buffer for buf!\b");
 		exit(-1);
 	}
-	feedback = syscall(223,buf,&nr);
+	printf("SYSTEM CALL\n");
+	fb = syscall(223,buf,&nr);
 	printf("Feedback = %d",fb);
 	return 0;
 }
